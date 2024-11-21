@@ -10,7 +10,7 @@ package maratonaJava.T02_OrientacaoObjetos.A06_ModificadorStatic.domain;
 
 public class Anime {
     private String name;
-    private static int[] episodes;
+    private static final int[] episodes;
 
     //bloco de inicialização estatico
     static {
