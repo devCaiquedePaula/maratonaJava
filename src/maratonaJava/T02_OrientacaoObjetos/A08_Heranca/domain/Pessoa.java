@@ -1,9 +1,29 @@
 package maratonaJava.T02_OrientacaoObjetos.A08_Heranca.domain;
 
 public class Pessoa {
-    private String nome;
-    private String cpf;
-    private Endereco endereco;
+    protected String nome;
+    protected String cpf;
+    protected Endereco endereco;
+    static {
+        System.out.println("Dentro do bloco de inicialização estatico de pessoa");
+    }
+
+    {
+        System.out.println("Dentro do bloco de inicialização de pessoa 1");
+    }
+    {
+        System.out.println("Dentro do bloco de inicialização de pessoa 2");
+    }
+
+    public Pessoa(String nome) {
+        System.out.println("Dentro do construtor de pessoa");
+        this.nome = nome;
+    }
+
+    public Pessoa(String nome, String cpf) {
+        this(nome);
+        this.cpf = cpf;
+    }
 
     public void imprime() {
         System.out.println(this.nome);
