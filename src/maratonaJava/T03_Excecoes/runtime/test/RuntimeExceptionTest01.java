@@ -8,5 +8,6 @@ public class RuntimeExceptionTest01 {
 
         Object object = null;
         System.out.println(object.toString()); //NullPointerException
+
     }
 }
